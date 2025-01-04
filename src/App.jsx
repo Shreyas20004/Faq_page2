@@ -97,7 +97,7 @@ export default function App() {
   };
   
   return (
-    <div className=' h-auto w-[100vw] justify-center items-center  bg-slate-200  '>
+    <div className=' h-auto w-[100vw] justify-center items-center  bg-[#CECCCD]  '>
       <div className='flex justify-between mx-44 '>
       <div className='flex justify-between '>
           <div className="inline my-8 text-center">
@@ -106,33 +106,33 @@ export default function App() {
           </div>
       </div>
 
-      <div className="flex justify-center align-center p-24">
-          <button className="h-14 w-48 px-3 mt-7 text-lg font-medium text-black transition bg-slate-200 border-gray-300 border rounded-full shadow-sm sm:text-base md:text-lg hover:bg-gray-800 hover:text-white ">
+      <div className="flex justify-center p-24 align-center">
+          <button className="w-48 px-3 text-lg font-medium text-[#103c59] transition border border-slate-600 focus: rounded-full shadow-sm h-14 mt-7 bg-[#CECCCD] sm:text-base md:text-lg hover:bg-gray-800 hover:text-white ">
               Book an Intro Call
           </button>
       </div>
       </div>
 
-      <div className="flex justify-center mt-8 pb-8">
+      <div className="flex justify-center pb-8 mt-8 text-[#103c59]">
       <div className='w-[600px] mr-10'>
         {dataL.map((item, j) => (
           <div id='items' className='bg-[#fffffe] m-1 p-7 rounded-lg'>
-            <div className='font-medium text-xl  justify-between flex cursor-pointer' id='title' onClick={toggle(j, 'left')}>
+            <div className='flex justify-between text-xl font-medium cursor-pointer' id='title' onClick={toggle(j, 'left')}>
               {item.question}
               <span className=''>{state && state.index === j && state.set === 'left' ? '-' : '+'}</span>
             </div>
-            <div className={state && state.index === j && state.set === 'left' ? 'text-black' : 'hidden'} id='content'>{item.answer}</div>
+            <div className={state && state.index === j && state.set === 'left' ? 'text-[#103c59]' : 'hidden'} id='content'>{item.answer}</div>
           </div>
         ))}
       </div>
       <div className='w-[600px]'>
         {dataR.map((item, i) => (
           <div id='items' className='bg-[#ffffff] m-1 p-7 rounded-lg'>
-            <div className='font-medium text-xl  justify-between flex cursor-pointer' id='title' onClick={toggle(i, 'right')}>
+            <div className='flex justify-between text-xl font-medium cursor-pointer' id='title' onClick={toggle(i, 'right')}>
               {item.question}
               <span className=''>{state && state.index === i && state.set === 'right' ? '-' : '+'}</span>
             </div>
-            <div className={state && state.index === i && state.set === 'right' ? 'text-black' : 'hidden'} id='content'>{item.answer}</div>
+            <div className={state && state.index === i && state.set === 'right' ? 'text-[#103c59]' : 'hidden'} id='content'>{item.answer}</div>
           </div>
         ))}
       </div>
